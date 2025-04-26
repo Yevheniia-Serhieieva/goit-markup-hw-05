@@ -668,14 +668,21 @@ main {
     right: 24px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: #e7e9fc;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-svg {
     fill: #2e2f42;
     width: 8px;
     height: 8px;
-    
 }
+
+.modal-btn-close:hover {
+    background-color: #404bbf;
+}
+
 .modal-title {
     padding-top: 72px;
     padding-left: 24px;
@@ -725,9 +732,6 @@ main {
     height: 40px;
     padding-left: 62px;
     outline: none;
-    /* transition-property: border;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .modal-input:focus {
