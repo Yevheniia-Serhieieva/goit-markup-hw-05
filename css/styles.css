@@ -625,6 +625,10 @@ main {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.footer-subscribe-btn:hover, .footer-subscribe-btn:focus {
+    background-color: #404BBF;
+}
+
 .footer-subscribe-svg {
     fill: #fff;
     margin-left: 16px;
