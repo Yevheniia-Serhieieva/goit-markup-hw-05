@@ -712,7 +712,7 @@ main {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-svg:hover, .modal-svg:focus {
+.modal-btn-close:hover .modal-svg, .modal-btn-close:focus .modal-svg {
     fill: #ffffff;
 }
 
