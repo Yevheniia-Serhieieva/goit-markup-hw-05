@@ -605,9 +605,12 @@ main {
 }
 
 .footer-subscribe-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 4px;
     border: none;
-    max-width: 165px;
+    min-width: 165px;
     height: 40px;
     background-color: #4d5ae5;
     font-weight: 500;
@@ -617,9 +620,6 @@ main {
     text-align: center;
     color: #fff;
     cursor: pointer;
-    display: block;
-    gap: 16px;
-    /* position: relative; */
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -627,7 +627,7 @@ main {
 
 .footer-subscribe-svg {
     fill: #fff;
-    /* position: absolute; */
+    margin-left: 16px;
 }
 
 .backdrop {
@@ -646,6 +646,7 @@ main {
 }
 
 .modal {
+    padding: 72px 24px 24px 24px;
     position: absolute;
     background-color: #fcfcfc;
     top: 50%;
@@ -654,9 +655,6 @@ main {
     border-radius: 4px;
     width: 408px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 16px;
 }
 
 .modal-btn-close {
@@ -684,11 +682,7 @@ main {
 }
 
 .modal-title {
-    padding-top: 72px;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-bottom: 16px;
-    min-width: 360px;
+    margin-bottom: 16px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -699,11 +693,13 @@ main {
 
 .modal-form {
     border-radius: 4px;
-    margin: 0 24px;
+}
+
+.modal-form-box {
+    margin-bottom: 8px;
 }
 
 .modal-form-item {
-    margin-bottom: 8px;
     position: relative;
 }
 
@@ -733,7 +729,7 @@ main {
     border-radius: 4px;
     width: 100%;
     height: 40px;
-    padding-left: 62px;
+    padding-left: 38px;
     outline: none;
     transition-property: border, focus;
     transition-duration: 250ms;
@@ -758,6 +754,7 @@ main {
     transition-property: border;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 8px 16px;
 }
 
 .modal-textarea::placeholder {
@@ -765,8 +762,6 @@ main {
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: rgba(46, 47, 66, 0.4);
-    top: 8px;
-    left: 16px;
 }
 
 .modal-textarea:focus {
@@ -783,36 +778,38 @@ main {
     
 }
 
-.modal-form-privacy-mark {
-    border-radius: 2px;
-    fill:  #404bbf;
-    stroke: #f4f4fd;
-    border: none;
-    height: 16px;
-    width: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-form-privacy-input:checked + .modal-form-privacy-mark {
-    background-color: #404bbf;    
-}
-
-.modal-form-privacy-svg {
-
-}
-
 .modal-form-privacy-label {
     margin-bottom: 0;
-    display: flex;
-    align-items: center;
-    gap: 8px;
     display: inline-block;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
+}
+
+.modal-form-privacy-mark {
+    border-radius: 2px;
+    fill:  transparent;
+    height: 16px;
+    width: 16px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    border: 1px solid  rgba(46, 47, 66, 0.4);
+    margin-right: 8px;
+}
+
+.modal-form-privacy-input:checked + .modal-form-privacy-label > .modal-form-privacy-mark {
+    background-color: #404bbf;  
+    border-radius: 2px;
+    border: 1px solid #404bbf;  
+}
+
+.modal-form-privacy-svg {
+    fill: #f4f4fd;
+    width: 10px;
+    height: 8px;
 }
 
 .modal-privacy {
