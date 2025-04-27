@@ -696,6 +696,11 @@ main {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal-btn-close:hover, .modal-btn-close:focus {
+    background-color: #404bbf;
+    border: none;
+}
+
 .modal-svg {
     fill: #2e2f42;
     transition-property: fill;
@@ -703,9 +708,7 @@ main {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-btn-close:hover, .modal-btn-close:focus {
-    background-color: #404bbf;
-    border: none;
+.modal-svg:hover, .modal-svg:focus {
     fill: #ffffff;
 }
 
@@ -799,7 +802,7 @@ main {
     
 }
 
-.modal-textarea:focus {
+.modal-textarea:focus, .modal-textarea:active {
     border-color: #4d5ae5;
 }
 
@@ -838,7 +841,7 @@ main {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form-privacy-input:checked + .modal-form-privacy-label > .modal-form-privacy-mark {
+.modal-form-privacy-input + .modal-form-privacy-label > .modal-form-privacy-mark {
     background-color: #404bbf; 
     border: none;
     fill: #f4f4fd; 
