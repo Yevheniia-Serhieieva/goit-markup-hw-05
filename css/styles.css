@@ -681,7 +681,7 @@ main {
     height: 8px;
 }
 
-.modal-btn-close:hover {
+.modal-btn-close:hover, .modal-btn-close:focus {
     background-color: #404bbf;
 }
 
